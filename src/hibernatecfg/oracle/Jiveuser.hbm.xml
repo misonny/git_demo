@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.webrage.domain">
+	<class
+		name="Jiveuser"
+		table="JIVEUSER"
+	>
+		<id
+			name="Id"
+			type="integer"
+			column="ID"
+		>
+			<generator class="sequence" >
+			    <param name="sequence">SQ_JIVEUSER</param>
+			</generator>
+		</id>
+
+		<property
+			name="Username"
+			column="USERNAME"
+			type="string"
+			not-null="true"
+			length="64"
+		/>
+		<property
+			name="Password"
+			column="PASSWORD"
+			type="string"
+			not-null="false"
+			length="32"
+		/>
+		<property
+			name="Encryptedpassword"
+			column="ENCRYPTEDPASSWORD"
+			type="string"
+			not-null="false"
+			length="255"
+		/>
+		<property
+			name="Name"
+			column="NAME"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="Email"
+			column="EMAIL"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="Creationdate"
+			column="CREATIONDATE"
+			type="string"
+			not-null="true"
+			length="15"
+		/>
+		<property
+			name="Modificationdate"
+			column="MODIFICATIONDATE"
+			type="string"
+			not-null="true"
+			length="15"
+		/>
+		<property
+			name="EmployeeId"
+			column="EMPLOYEE_ID"
+			type="integer"
+			not-null="true"
+			length="10"
+		/>
+
+	</class>	
+</hibernate-mapping>
